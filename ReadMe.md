@@ -1,6 +1,3 @@
- // Start of Selection
-# Start Generation Here
-
 ## Starting the Servers
 
 ### Backend Server
@@ -56,5 +53,3 @@
    ```bash
    npm start
    ```
-
-# End Generation Here
