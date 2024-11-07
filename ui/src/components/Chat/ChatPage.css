@@ -1,0 +1,23 @@
+.chat-page {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-message {
+    font-size: 18px;
+    color: #888;
+}

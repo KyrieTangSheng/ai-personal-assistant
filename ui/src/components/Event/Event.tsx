@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
+import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
+import './Event.css';
 
 interface EventProps {
     id: number;
@@ -7,14 +9,24 @@ interface EventProps {
     importance: string;
 }
 
-const Event: React.FC<EventProps> = ({id, description, time, importance}) => {
-
-    return(
-    <div>
-        <h3>{time}</h3>
-        <p>{description}</p>
-        <p>{importance}</p>
-    </div>
+const Event: React.FC<EventProps> = ({ id, description, time, importance }) => {
+    return (
+        <Card className="event-card">
+            <CardContent>
+                <Typography variant="h5" component="div" gutterBottom>
+                    {time}
+                </Typography>
+                <Typography variant="body1" color="text.secondary" paragraph>
+                    {description}
+                </Typography>
+                <Typography variant="body2" color="text.primary" sx={{ fontWeight: 'bold' }}>
+                    Importance: {importance}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small" color="primary">Learn More</Button>
+            </CardActions>
+        </Card>
     );
 }
 
